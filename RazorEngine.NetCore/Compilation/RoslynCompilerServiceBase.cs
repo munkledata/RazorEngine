@@ -235,7 +235,9 @@ namespace RazorEngine.Roslyn.CSharp
                     .WithPdbFilePath(assemblyPdbFile);
                 var pdbStreamHelper = pdbStream;
 
-                if (IsMono())
+                if (IsMono() 
+                    || RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
+                    || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
                     opts = opts.WithDebugInformationFormat(DebugInformationFormat.PortablePdb);
                 }
