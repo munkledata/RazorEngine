@@ -19,6 +19,7 @@ using System.Reflection;
 using System.Security;
 using System.Security.Permissions;
 using Microsoft.CodeAnalysis.Emit;
+using System.Runtime.InteropServices;
 
 
 namespace RazorEngine.Roslyn.CSharp
